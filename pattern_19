@@ -1,0 +1,45 @@
+class Main {
+    public void patternup(int n) {
+        for (int i = 1; i <= n; i++) {
+            // Print increasing stars
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            // Print middle spaces
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+            // Print increasing stars
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public void patterndown(int n) {
+        for (int i = 1; i < n; i++) {
+            // Print decreasing stars
+            for (int j = 0; j < n - i; j++) {
+                System.out.print("*");
+            }
+            // Print middle spaces
+            for (int j = 0; j < 2 * i; j++) {
+                System.out.print(" ");
+            }
+            // Print decreasing stars
+            for (int j = 0; j < n - i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Main m = new Main();
+        m.patternup(5);
+        m.patterndown(5);
+
+        System.out.println("Try programiz.pro");
+    }
+}
